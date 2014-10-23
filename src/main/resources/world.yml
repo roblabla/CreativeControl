@@ -1,0 +1,117 @@
+World:
+  ## GameMode, the main gamemode of this world, options are SURVIVAL, CREATIVE or ADVENTURE.
+  GameMode: SURVIVAL
+  ## Exclude, if true, this plugin will ignore this world, it means that any protections will be effective in this world.
+  Exclude: false
+  ## ChangeGameMode, if true, this plugin will handle the gamemode per world, the option GameMode will be used.
+  ChangeGameMode: false
+
+BlackList:
+  ## Commands, list here all commands to disallow creative players to use.
+  Commands: /buy, /sell, /logout
+  ## SurvivalCommands, list here, all commands to disallow survival players to use.
+  SurvivalCommands: []
+  ## BlockPlace, list here, all block ids that creative players will be unable to place.
+  BlockPlace: 8, 9, 10, 11, 46, 51, 52, 79:0
+  ## BlockBreak, list here, all block ids that creative players will be unable to break.
+  BlockBreak: []
+  ## ItemUse, list here, all block/item ids that creative players will be unable to use, this means right and left click.
+  ItemUse: 259, 326, 327, 384, 385, 389:0
+  ## ItemInteract, list here, all block/item ids that creative players will be unable to interact with, this means right click only.
+  ItemInteract: 23, 54:0, 58, 61, 62, 84, 116:0, 117, 130, 145
+  ## Inventory, list here, all block/item ids that will be automatically removed from creative players inventories.
+  Inventory: []
+  ## SignText, list here, the line of all signs that creative players will be unable to interact with.
+  ## Obs: DONT INCLUDE [] or color codes, and use _ for spaces. This option does not work well, is recomended to use the permission system.
+  SignText: buy, sell, trade
+
+## To any option in "MiscProtection" Works, Events.MiscProtection has to be "true" in settings.yml.
+MiscProtection:
+  ## NoTNTExplosion, if true, TNT placed by creative players will not explode.
+  NoTNTExplosion: false
+  ## IceMelt, if true, ICE placed by creative players will not melt [CPU++]
+  IceMelt: false
+  ## LiquidControl, if true, liquids placed by creative players will not flow [CPU++] [BUGGY]
+  LiquidControl: false
+  ## Fire, if true, blocks placed by creative players will not burn. [CPU+]
+  Fire: false
+
+BlockProtection:
+  ## WaterFlow, if true, creative blocks will be protected against water (eg torches)
+  WaterFlow: false
+  ## WorldEdit, if true, blocks created by WorldEdit will not drop when breaked.
+  WorldEdit: false
+  ## OwnBlocks, if true, blocks placed by creative players will have a ownship system, only the owner or properly allowed people will be able to break it. The block still protected with NoDrop.
+  OwnBlocks: false
+  ## NoDrop, if true, blocks placed by creative players will not drop when breaked
+  NoDrop: true
+  ## Explosions, if true, creative blocks will be protected against explosions. [REQUIRE NoDrop or OwnBlocks Activated]
+  Explosions: false
+  ## CreativeOnly, if true, only creative players area ble to break creative blocks. [REQUIRE NoDrop or OwnBlocks Activated]
+  CreativeOnly: false
+  ## Pistons, if true, blocks placed by creative players will not be pushed/pulled by pistons [REQUIRE NoDrop or OwnBlocks Activated]
+  Pistons: false
+  ## Physics, if true, blocks placed by creative players will not fall in some cases, it is buggy, bukkit does not have an api method for that yet. [REQUIRE NoDrop or OwnBlocks Activated]
+  Physics: false
+  ## BlockAgainst, if true, the OwnBlock system will check if the block against the block placed is protected.
+  BlockAgainst: false
+  ## CheckAttached, if true, attached blocks like torches will be protected by the NoDrop or OwnBlocks system.
+  CheckAttached: false
+  ## inverted, if true, the exclude list will work as a include list, so, the block will only be protected if its id is listed here.
+  inverted: false
+  ## exclude, list here, all block ids to be ignored by the NoDrop/OwnBlocks system, more blocks you list here, better will be the performance.
+  exclude: 0, 8, 9, 10, 11
+  ## BlockPerMinute, set the amount of blocks a player can place per minute
+  BlockPerMinute: -1
+
+Preventions:
+  ##ItemDrop, if true, creative players will be unable to drop items
+  ItemDrop: true
+  ##ItemPickup, if true, creative players will be unable to pickup items
+  ItemPickup: true
+  ## PvP, if true, creative players will be unable to attack other players
+  PvP: true
+  ## Mobs, if true, creative players will be unable to attack mobs
+  Mobs: false
+  ## Eggs, if true, creative players will be unable to use Monster and Chicken eggs.
+  Eggs: true
+  ## Target, if true, creative players will not be target by mobs [CPU+]
+  Target: false
+  ## MobsDrop, if true, when a creative player kills a mob, no drop or exp will be given.
+  MobsDrop: true
+  ## IronGolem, if true, prevent creative players from creating Iron Golems
+  IronGolem: true
+  ## SnowGolem, if true, prevent creative players from creating Snow Golems
+  SnowGolem: true
+  ## Wither, if true, prevent creative players from creating Wither
+  Wither: true
+  ## ClearDrops, if true, when a creative player die, the drops will be removed
+  ClearDrops: true
+  ## Enchantments, if true, creative players will be unable to enchant items.
+  Enchantments: true
+  ## MineCartStorage, if true, creative players will be unable to use chest/furnaces in minecarts
+  MineCartStorage: true
+  ## BreakBedRock, if true, creative players will be unable to break the 'bottom' of the world
+  BreakBedRock: true
+  ## InvInteract, if true, creative players will be unable to interact with any type of inventory but the creative and creative quickbar.
+  InvInteract: true
+  ## Bonemeal, if true, creative players will be unable to use Bone meal on tress, there is no api methods for that yet, might be a litle buggy.
+  Bonemeal: true
+  ## InteractVillagers, if true, creative players will be unable to interact with villagers.
+  InteractVillagers: true
+  ## PotionSplash, if true, creative players will be unable to use potions
+  PotionSplash: true
+  ## ItemFrame, if true, creative players will be unable to use itemframes
+  ItemFrame: true
+  ## VehicleDrop, if trus, this plugin will try to prevent minecarts and boats created by creative player to drop!
+  VehicleDrop: true
+  ## VehicleLimit, set a limit of how much vehicles a creative player can create without destroying the old one.
+  VehicleLimit: -1
+  ## StackLimit, set the limit of amount per item that a creative player can have.
+  StackLimit: 1
+  ## InventoryOpen, if true, creative players will be unable to open any inventory apart from the creative inventory.
+  InventoryOpen: false
+  ## RemoveFlyOnPvp, if true, if the player hits someone with fly, he'll lost the fly mode
+  RemoveFlyOnPvP: false
+  ## NoCreativeOnPvP, if true, if the player hits someone with creative, he'll lost the creative mode
+  NoCreativeOnPvP: false
